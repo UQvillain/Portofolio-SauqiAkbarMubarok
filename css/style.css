@@ -642,6 +642,18 @@ h3.my-profession {
   padding-right: 20px;
 }
 
+/* Margin left */
+
+.margin-left {
+  margin-left: 20px;
+}
+
+/* Info project */
+
+.info-project p strong {
+  font-weight: bold;
+}
+
 /* service */
 
 .service .container {
