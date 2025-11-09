@@ -153,35 +153,7 @@
             <h4 class="contact-sub-title padd-15">
               Don't forget to contact me
             </h4>
-
-            <div class="row">
-              <div class="contact-info-item padd-15">
-                <div class="icon"><i class="fas fa-phone"></i></div>
-                <h4>Call me on</h4>
-                <p><a href="tel:+6281394243448">+62 813-9424-3448</a></p>
-              </div>
-              <div class="contact-info-item padd-15">
-                <div class="icon"><i class="fas fa-globe-europe"></i></div>
-                <h4>Website</h4>
-                <p>www.domain.com</p>
-              </div>
-              <div class="contact-info-item padd-15">
-                <div class="icon"><i class="fas fa-envelope"></i></div>
-                <h4>Email</h4>
-                <p>
-                  <a href="mailto:sauqi4640@gmail.com">sauqi4640@gmail.com</a>
-                </p>
-              </div>
-              <div class="contact-info-item padd-15">
-                <div class="icon"><i class="fab fa-instagram"></i></div>
-                <h4>Instagram</h4>
-                <p>
-                  <a href="https://www.instagram.com/sauqi4371/" target="_blank"
-                    >@sauqi4371</a
-                  >
-                </p>
-              </div>
-            </div>
+            <div id="Contact-container"></div>
           </div>
         </section>
       </main>
@@ -207,67 +179,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.1.0/typed.umd.js"></script>
     <script src="js/script.js"></script>
     <script src="js/style-switch.js"></script>
-    <script>
-      async function loadProjects() {
-        const container = document.getElementById("About-Container");
-
-        try {
-          const [ab] = await Promise.all([
-            fetch("page/about.html").then((r) => r.text()),
-          ]);
-
-          // ubah urutan tampil di sini:
-          container.innerHTML = ab;
-        } catch (err) {
-          console.error("Gagal memuat salah satu proyek:", err);
-          container.innerHTML =
-            "<p style='color:red;'>Gagal memuat proyek.</p>";
-        }
-      }
-
-      loadProjects();
-    </script>
-    <script>
-      async function loadProjects() {
-        const container = document.getElementById("Portofolio-container");
-
-        try {
-          const [qa, fe, ui, be, ml] = await Promise.all([
-            fetch("page/Portofolio/qa-project.html").then((r) => r.text()),
-            fetch("page/Portofolio/front-end.html").then((r) => r.text()),
-            fetch("page/Portofolio/UI-UX.html").then((r) => r.text()),
-            fetch("page/Portofolio/back-end.html").then((r) => r.text()),
-            fetch("page/Portofolio/ml.html").then((r) => r.text()),
-          ]);
-
-          // ubah urutan tampil di sini:
-          container.innerHTML = qa + fe + ui + be + ml;
-        } catch (err) {
-          console.error("Gagal memuat salah satu proyek:", err);
-          container.innerHTML =
-            "<p style='color:red;'>Gagal memuat proyek.</p>";
-        }
-      }
-      loadProjects();
-    </script>
-    <script>
-      async function loadProjects() {
-        const container = document.getElementById("Certificate-container");
-
-        try {
-          const [ab] = await Promise.all([
-            fetch("page/certificate.html").then((r) => r.text()),
-          ]);
-
-          // ubah urutan tampil di sini:
-          container.innerHTML = ab;
-        } catch (err) {
-          console.error("Gagal memuat salah satu proyek:", err);
-          container.innerHTML =
-            "<p style='color:red;'>Gagal memuat proyek.</p>";
-        }
-      }
-      loadProjects();
-    </script>
+    <script src="js/page.js"></script>
   </body>
 </html>
